@@ -18,7 +18,7 @@ echo "Setting up directories to extract PA Server into"
 mkdir PAServer
 mkdir PAServer/22.0
 rm -r PAServer/22.0/*
-tar xvf LinuxPAServer22.0.tar.gz -C PAServer/22.0 --strip-components=1
+tar xvf PAServer22.0.tar.gz -C PAServer/22.0 --strip-components=1
 # This fixes the Python 3.6 dependency
 ln -sf `ls -1 /usr/lib/x86_64-linux-gnu/libpython3.*.so.1.0 | tail -1` ~/PAServer/22.0/lldb/lib/libpython3.so
 rm PAServer22.0.tar.gz
