@@ -1,7 +1,7 @@
 #!/bin/bash
 # 
 # Download and execute with the following:
-# curl -L https://embt.co/SetupUbuntu4Delphi22 | bash
+# curl -L https://raw.githubusercontent.com/felipemesturini/scripts-paserver/main/PAServer22.sh | bash
 #
 echo "Updating the local package directory"
 sudo apt update 
@@ -16,9 +16,9 @@ echo "Downloading Linux PAServer for Alexandria 11 (22.0)"
 wget https://github.com/felipemesturini/scripts-paserver/raw/df5e35856a03fa8f3b3fdd372da8205188acf30d/PAServer22.0.tar.gz
 echo "Setting up directories to extract PA Server into"
 mkdir PAServer
-mkdir PAServer/22
-rm -r PAServer/22/*
-tar xvf LinuxPAServer22.0.tar.gz -C PAServer/22 --strip-components=1
+mkdir PAServer/22.0
+rm -r PAServer/22.0/*
+tar xvf LinuxPAServer22.0.tar.gz -C PAServer/22.0 --strip-components=1
 # This fixes the Python 3.6 dependency
 ln -sf `ls -1 /usr/lib/x86_64-linux-gnu/libpython3.*.so.1.0 | tail -1` ~/PAServer/22.0/lldb/lib/libpython3.so
 rm PAServer22.0.tar.gz
